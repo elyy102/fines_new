@@ -11,6 +11,7 @@ function Card() {
   const [car_number, setCarNumber] = useState('')
   const [imageValue, setImageValue] = useState('')
   const [image, setImage] = useState()
+  const [status, setStatus] = useState('')
 
   const [applications, setApplications] = useState([])
 
@@ -23,7 +24,6 @@ function Card() {
       mode: 'cors',
       headers: {
         "Content-Type": "application/json",
-
         'Authorization': `Bearer ${token}`
 
       }
@@ -41,7 +41,7 @@ function Card() {
           <p>Дата нарушения: {el.date}</p>
           <p>Место нарушения: {el.place}</p>
           <p>Номер машины: {el.car_number}</p>
-          <p className="status">Заявка принята</p>
+          <p className="status">{el.status}</p>
         </div>
         )
       }
