@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
+import Accept from './accept_btn'
+import NotAccept from './not_accept_btn'
+import { useSelector } from 'react-redux'
 
 function Card_admin() {
   const [imageValue, setImageValue] = useState('')
@@ -8,13 +11,15 @@ function Card_admin() {
 
   const [applications, setApplications] = useState([])
 
+  const token = useSelector((state) => state.auth.token)
 
   useEffect(() => {
-    fetch("http://localhost:3000/requests/", {
+    fetch("http://localhost:3000/requests_all/", {
       method: 'GET',
       mode: 'cors',
       headers: {
         "Content-Type": "application/json",
+        'Authorization': `Bearer ${token}`
       }
     })
       .then(data => data.json())
@@ -26,12 +31,10 @@ function Card_admin() {
 {
         Array.isArray(applications) && applications.map(el =>
           <div className="profile_myapplication">
-          <Link to={'/separate_card'}>
             <img src={el.image} alt="" />
-          </Link>
               <div className="card_admin_btn">
-                 <button className='card_admin_btn_1'>Принять</button>
-                 <button className='card_admin_btn_2'>Отклонить</button> 
+                 <Accept id={el.id} />
+                 <NotAccept id={el.id} />
               </div>
             </div>
         )
