@@ -41,7 +41,7 @@ function Card() {
           <p>Дата нарушения: {el.date}</p>
           <p>Место нарушения: {el.place}</p>
           <p>Номер машины: {el.car_number}</p>
-          <p className="status">{el.status}</p>
+          <p id='status' >{el.status}</p>
         </div>
         )
       }
