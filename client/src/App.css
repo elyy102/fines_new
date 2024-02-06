@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 #logo_a {
   text-decoration: none;
 }
