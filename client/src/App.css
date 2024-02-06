@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#logo_a {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Roboto Mono', monospace;
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.logo span {
+  font-family: 'Roboto Mono', monospace;
+  color: #FF686E;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.login_rectangle{
+  margin: 0 auto;
+  text-align: center;
+  width: 52vw;
+  max-width: 714px;
+  height: fit-content;
+  padding: 30px 68px;
+  border-radius: 30px;
+  background: #FF686E;
+}
+
+.login{
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.login_rectangle_h1{
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+margin-bottom: 30px;
+}
+input[type=email], [type=password], [type=text], [type=date], [type=file] {
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  background: #FFF;
+  border: none;
+  margin-bottom: 18px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+input {outline:none;}
+
+.login_btn{
+  margin-top: 12px;
+  margin-bottom: 30px;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 17px 70px;
+  border-radius: 15px;
+  background: #1E1E1E;
+}
+
+.login_p{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.login_p{
+  color: #FFF;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.login_p a{
+  color: #1E1E1E;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.profile {
+  margin-top: 50px;
+border-radius: 30px;
+background: #FF686E;
+padding: 30px 96px;
+}
+
+.login_rectangle_h1 {
+  color: #FFF;
+font-family: Montserrat;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+margin-bottom: 34px;
+}
+
+.profile_pa {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 8px;
+}
+
+.profile_p {
+  color: #FFF;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 0;
+}
+
+.profile_pa a {
+  color: #FFF;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+.profile_myapplications {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 378px);
+  width: 100%; 
+  column-gap: 20px; 
+  row-gap: 30px;
+  margin-top: 30px;
+}
+
+.profile_myapplication {
+  padding: 17px 21px;
+    height: fit-content;
+    border-radius: 15px;
+background: #FFF;
+}
+
+.profile_myapplication img {
+  width: 336px;
+  height: 226px;
+  border-radius: 15px;
+  margin-bottom: 23px;
+}
+
+.profile_myapplication p {
+  color: #1E1E1E;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 16px;
+}
+
+.status {
+  margin-top: 40px;
+  color: #FF686E;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-align: center;
+}
+
+.card_admin_btn {
+  display: flex;
+  gap: 16px;
+}
+
+.card_admin_btn_1 {
+  width: 160px;
+height: 45px;
+border-radius: 15px;
+background: #1E1E1E;
+color: #FFF;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border: none;
+}
+
+.card_admin_btn_2 {
+  width: 160px;
+height: 45px;
+border-radius: 15px;
+background: #FF686E;
+color: #FFF;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border: none;
+}
+
+.separate_card {
+  margin-top: 50px;
+  width: 482px;
+height: fit-content;
+border-radius: 15px;
+background: #FF686E;
+margin-left: auto;
+margin-right: auto;
+}
+
+.separate_card_content {
+  margin-left: auto;
+margin-right: auto;
+max-width: 482px;
+padding: 17px 27px;
+}
+
+.separate_card img {
+  width: 100%;
+  height: 296px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.separate_card p {
+  color: #FFF;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.separate_card_btn {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.separate_card_btn_1 {
+  width: 204px;
+  height: 45px;
+  border-radius: 15px;
+  background: #FFF;
+  color: #1E1E1E;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}
+
+.separate_card_btn_2 {
+  width: 204px;
+  height: 45px;
+  border-radius: 15px;
+  background: #1E1E1E;
+  color: #FFF;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border: none;
+}
+
+.wrapper {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#logout_btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 204px;
+  height: 45px;
+  border-radius: 15px;
+  background: #1E1E1E;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}
