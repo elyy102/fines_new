@@ -51,6 +51,10 @@ const authRouterAdmin = createBrowserRouter([
     element: <Separate_card />,
   },
   {
+    path: '*',
+    element: <Navigate to="/" />
+  },
+  {
     path: '/admin',
     element: <>admin</>
   }
