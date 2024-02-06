@@ -51,6 +51,13 @@ app.get("/requests/", roleMiddleware(['USER']), async (req, res) => {
     res.send(data)
 })
 
+app.get("/requests_all/", roleMiddleware(['ADMIN']), async (req, res) => {
+    const token = req.headers.authorization.split(' ')[1]
+    const {id} = jwt.verify(token, "SECRET_KEY")
+    const data = await sql`select * from Applications`
+    res.send(data)
+})
+
 app.post("/add/", roleMiddleware(['USER']), upload.single('image'), async (req, res) => {
     const image = req.file.filename
     const { date, place, car_number} = req.body
@@ -67,6 +74,20 @@ app.get("/user_info/", roleMiddleware(['USER']), async (req, res) => {
     const {id} = jwt.verify(token, "SECRET_KEY")
     const data = await sql`select * from users where id = ${id}`
     res.send(data)
+})
+
+app.get("/admin_info/", roleMiddleware(['ADMIN']), async (req, res) => {
+    const token = req.headers.authorization.split(' ')[1]
+    const {id} = jwt.verify(token, "SECRET_KEY")
+    const data = await sql`select * from users where id = ${id}`
+    res.send(data)
+})
+
+app.post("/status/", roleMiddleware(['ADMIN']), async (req, res) => {
+    const { id, status } = req.body
+    console.log(id);
+    await sql`UPDATE Applications SET status = ${status} where id = ${id}`
+    res.sendStatus(200)
 })
 
 //функция старта приложения
@@ -97,6 +118,7 @@ const start = async () => {
         place VARCHAR(50),
         car_number VARCHAR(15),
         image varchar(100),
+        status varchar(100),
         fk_user_id INTEGER REFERENCES users(id)
         )`
 
