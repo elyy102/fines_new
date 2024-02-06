@@ -54,7 +54,7 @@ app.get("/requests/", roleMiddleware(['USER']), async (req, res) => {
 app.get("/requests_all/", roleMiddleware(['ADMIN']), async (req, res) => {
     const token = req.headers.authorization.split(' ')[1]
     const {id} = jwt.verify(token, "SECRET_KEY")
-    const data = await sql`select * from Applications`
+    const data = await sql`select * from Applications WHERE Status IS NULL`
     res.send(data)
 })
 
